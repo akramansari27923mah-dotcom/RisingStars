@@ -44,32 +44,32 @@ export const grades = [
 
 export const boards = [
   {
-    title: "CBSE",
+    title: "IGCSE",
     description:
-      "Comprehensive learning for CBSE students with expert guidance and exam-focused preparation.",
-    icon: School,
-    color: "bg-blue-100 text-blue-600",
+      "International curriculum with inquiry-based learning, critical thinking, and global academic standards.",
+    icon: Globe,
+    color: "bg-purple-100 text-purple-600",
   },
   {
     title: "IB",
     description:
-      "Holistic education focused on conceptual understanding, research skills, and international perspectives.",
+    "Holistic education focused on conceptual understanding, research skills, and international perspectives.",
     icon: Award,
     color: "bg-pink-100 text-pink-600",
   },
+    {
+      title: "CBSE",
+      description:
+        "Comprehensive learning for CBSE students with expert guidance and exam-focused preparation.",
+      icon: School,
+      color: "bg-blue-100 text-blue-600",
+    },
   {
     title: "ICSE",
     description:
       "Concept-based learning with in-depth explanations and personalized support for ICSE students.",
     icon: GraduationCap,
     color: "bg-green-100 text-green-600",
-  },
-  {
-    title: "IGCSE",
-    description:
-      "International curriculum with inquiry-based learning, critical thinking, and global academic standards.",
-    icon: Globe,
-    color: "bg-purple-100 text-purple-600",
   },
   {
     title: "UP Board",
