@@ -43,26 +43,25 @@ const HeroSection = () => {
           >
             <IoLogoWhatsapp size={25} />
             <span>
-            Chat whit our sdvisor
+            Chat with our advisor
             </span>
             <ArrowRight size={18} />
           </Link>
         </div>
 
-         {/* Stats */}
           <div className="mt-14 grid grid-cols-3 gap-6">
             <div>
-              <h3 className="text-3xl font-bold text-blue-600">500+</h3>
+              <h3 className="text-3xl font-bold text-blue-600">10+</h3>
               <p className="text-gray-600">Courses</p>
             </div>
 
             <div>
-              <h3 className="text-3xl font-bold text-blue-600">10K+</h3>
+              <h3 className="text-3xl font-bold text-blue-600">1K+</h3>
               <p className="text-gray-600">Students</p>
             </div>
 
             <div>
-              <h3 className="text-3xl font-bold text-blue-600">50+</h3>
+              <h3 className="text-3xl font-bold text-blue-600">10+</h3>
               <p className="text-gray-600">Experts</p>
             </div>
           </div>

@@ -12,9 +12,8 @@ import {
   Headphones,
   School,
   Library,
-  Landmark
+  Landmark,
 } from "lucide-react";
-
 
 export const grades = [
   {
@@ -52,18 +51,18 @@ export const boards = [
     color: "bg-blue-100 text-blue-600",
   },
   {
+    title: "IB",
+    description:
+      "Holistic education focused on conceptual understanding, research skills, and international perspectives.",
+    icon: Award,
+    color: "bg-pink-100 text-pink-600",
+  },
+  {
     title: "ICSE",
     description:
       "Concept-based learning with in-depth explanations and personalized support for ICSE students.",
     icon: GraduationCap,
     color: "bg-green-100 text-green-600",
-  },
-  {
-    title: "UP Board",
-    description:
-      "Complete syllabus coverage with regular practice, mock tests, and revision sessions.",
-    icon: BookOpen,
-    color: "bg-orange-100 text-orange-600",
   },
   {
     title: "IGCSE",
@@ -73,11 +72,11 @@ export const boards = [
     color: "bg-purple-100 text-purple-600",
   },
   {
-    title: "IB",
+    title: "UP Board",
     description:
-      "Holistic education focused on conceptual understanding, research skills, and international perspectives.",
-    icon: Award,
-    color: "bg-pink-100 text-pink-600",
+      "Complete syllabus coverage with regular practice, mock tests, and revision sessions.",
+    icon: BookOpen,
+    color: "bg-orange-100 text-orange-600",
   },
   {
     title: "State Board",

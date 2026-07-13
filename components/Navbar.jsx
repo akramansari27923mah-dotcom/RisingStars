@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, GraduationCap, PhoneCall, Phone } from "lucide-react";
+import { Menu, X, GraduationCap, PhoneCall, Phone, PhoneOff } from "lucide-react";
 import { navLinks } from "@/data/allLinks";
 import { FaPhoneAlt } from "react-icons/fa";
 import Image from "next/image";
@@ -92,10 +92,14 @@ import Image from "next/image";
                 </div>
               </div>
 
-              <Link  href="tel:+918738022232" className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-[#25D366] py-2 font-medium text-white transition hover:bg-[#1DA851]">
+              <Link  href="tel:+918738022232" className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-[#25D366] py-2 font-medium text-white transition hover:bg-[#1DA851] cursor-pointer">
                 <Phone size={18} />
                 Call Now
               </Link>
+              <button onClick={() => setCalling(false)} className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-red-500 py-2 font-medium text-white transition hover:bg-red-400 cursor-pointer">
+                <PhoneOff size={18}/>
+                Cancel
+              </button>
             </div>
 
               )
@@ -129,6 +133,7 @@ import Image from "next/image";
               <Link
                 key={item?.name}
                 href={item?.href}
+                onClick={() => setOpen("0%")}
                 className="rounded-lg px-4 py-3 text-gray-700 transition hover:bg-blue-50 hover:text-blue-600"
               >
                 {item?.name}
@@ -137,7 +142,7 @@ import Image from "next/image";
 
             <div className="flex flex-col justify-center gap-5">
                <button
-            onClick={() => setCalling(!calling)}
+            onClick={() =>{ setCalling(!calling) , setOpen("0%")}}
             className="rounded-full bg-blue-600 w-fit px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
           >
             {
