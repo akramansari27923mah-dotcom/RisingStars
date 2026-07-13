@@ -107,12 +107,6 @@ export const features = [
     icon: Users,
   },
   {
-    title: "Certified Programs",
-    description:
-      "Receive certificates after successfully completing your courses.",
-    icon: Award,
-  },
-  {
     title: "Flexible Schedule",
     description: "Study at your own pace, anytime and from anywhere.",
     icon: Clock,
