@@ -98,7 +98,7 @@ const CustomerSupport = () => {
 
             </div>
 
-            <div className='w-full min-h-185 md:h-125 overflow-scroll hide-scroll border-b p-2'>
+            <div className='w-full md:h-125 h-152 overflow-scroll hide-scroll border-b p-2'>
                 <div className="flex flex-col gap-4 p-5 overflow-y-auto">
                     {message.map((msg, ind) => (
                         <div
