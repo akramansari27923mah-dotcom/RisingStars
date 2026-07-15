@@ -7,6 +7,7 @@ import Grades from './Grades'
 import StudyFramework from './Framework'
 import Footer from './Footer'
 import WelcomePopup from './WelcomePopup'
+import CustomerSupport from './CustomerSupport'
 
 
 
@@ -14,6 +15,7 @@ const HomePage = () => {
   return (
     <div>
         <HeroSection />
+        <CustomerSupport />
         <WelcomePopup />
         <Subjects />
         <WhyChooseUs />

@@ -28,3 +28,7 @@ body {
 *{
   scroll-behavior: smooth;
 }
+
+.hide-scroll::-webkit-scrollbar{
+  display: none;
+}

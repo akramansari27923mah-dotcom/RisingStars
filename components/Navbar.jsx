@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Menu, X, GraduationCap, PhoneCall, Phone, PhoneOff } from "lucide-react";
 import { navLinks } from "@/data/allLinks";
 import { FaPhoneAlt } from "react-icons/fa";
-import Image from "next/image";
 
 
 
@@ -18,12 +17,6 @@ import Image from "next/image";
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
 
         <Link href="/" className="flex items-center gap-2">
-        {/* <Image
-        src={'/logo.png'}
-        alt="Logo"
-        width={150}
-        height={150}
-        /> */}
           <div className="rounded-xl bg-blue-600 p-2 text-white">
             <GraduationCap size={24} />
           </div>
