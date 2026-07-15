@@ -116,7 +116,8 @@ const CustomerSupport = () => {
 
       
                     <div
-                        className={`max-w-[75%] rounded-2xl px-4 py-2 shadow-lg transition-all duration-300 hover:scale-[1.02] 
+                        className={`max-w-[75%] rounded-2xl px-4 py-2
+                             shadow-lg transition-all duration-300 hover:scale-[1.02] 
                         ${
                         msg?.role === "user"
                             ? "bg-blue-600 text-white rounded-br-md "
