@@ -148,8 +148,8 @@ const CustomerSupport = () => {
                         U
                         </div>
                     )}
-    </div>
-                    ))}
+        </div>
+             ))}
 
                 {
                     loading && (
