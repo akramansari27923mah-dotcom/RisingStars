@@ -38,10 +38,10 @@ const ContactPage = () => {
 
     <Link href={'/'} className='absolute top-5 left-5 flex justify-center items-center gap-2 cursor-pointer hover:scale-105 transition-all duration-300 border border-gray-200 bg-white text-black px-4 py-2 rounded-2xl shadow  hover:bg-white/80'>
       <CircleChevronLeft size={18} />
-      <span>
-      Back
-      </span>
-    </Link>
+        <span>
+        Back
+        </span>
+      </Link>
 
     <div className='shadow p-5 rounded-2xl text-black bg-white w-full max-w-2xl flex flex-col justify-center items-center gap-5'>
       
