@@ -40,7 +40,7 @@ export const metadata = {
     siteName: "Rising Stars",
     images: [
       {
-        url: "/og-image.png",
+        url: "/logo.png",
         width: 1200,
         height: 630,
         alt: "Learnaxo - Online Learning Platform",

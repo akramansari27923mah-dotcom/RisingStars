@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu, X, GraduationCap, PhoneCall, Phone, PhoneOff } from "lucide-react";
 import { navLinks } from "@/data/allLinks";
 import { FaPhoneAlt } from "react-icons/fa";
+import Image from "next/image";
 
 
 
@@ -17,13 +18,34 @@ import { FaPhoneAlt } from "react-icons/fa";
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
 
         <Link href="/" className="flex items-center gap-2">
-          <div className="rounded-xl bg-blue-600 p-2 text-white">
-            <GraduationCap size={24} />
-          </div>
+         <div className="group relative overflow-hidden rounded-xl">
+            <Image
+              src="/logo.png"
+              width={50}
+              height={50}
+              alt="Logo"
+              className="rounded-xl"
+            />
 
+            <span
+              className="
+                absolute 
+                inset-0
+                -translate-x-full
+                bg-linear-to-r
+                from-transparent
+                via-white/50
+                to-transparent
+                group-hover:translate-x-full
+                transition-transform
+                duration-800
+              "
+            />
+</div>
           <div>
             <h2 className="text-xl font-bold text-gray-900">
               Learn<span className="text-blue-600">axo</span>
+              
             </h2>
             <p className="text-xs text-gray-500">
               Learn Without Limits
@@ -106,9 +128,26 @@ import { FaPhoneAlt } from "react-icons/fa";
 
            <div className="flex justify-between items-center">
             <div className="flex items-center gap-2">
-                <div className="rounded-xl bg-blue-600 p-2 text-white">
-                    <GraduationCap size={24} />
-                </div>
+               
+               <Image
+  src="/logo.png"
+  width={48}
+  height={48}
+  alt="Learnaxo Logo"
+  priority
+  className="
+    rounded-xl
+    border border-blue-400/30
+    bg-white
+    p-1
+    shadow-lg shadow-blue-500/20
+    transition-all duration-300 ease-in-out
+    hover:scale-110
+    hover:rotate-3
+    hover:shadow-xl hover:shadow-blue-500/40
+    hover:border-blue-500
+  "
+/>
 
                 <div>
                     <h2 className="text-xl font-bold text-gray-900">
