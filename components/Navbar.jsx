@@ -19,13 +19,25 @@ import Image from "next/image";
 
         <Link href="/" className="flex items-center gap-2">
          <div className="group relative overflow-hidden rounded-xl">
-            <Image
-              src="/logo.png"
-              width={50}
-              height={50}
-              alt="Logo"
-              className="rounded-xl"
-            />
+             <Image
+  src="/logo.png"
+  width={48}
+  height={48}
+  alt="Learnaxo Logo"
+  priority
+  className="
+    rounded-xl
+    border border-blue-400/30
+    bg-white
+    p-1
+    shadow-lg shadow-blue-500/20
+    transition-all duration-300 ease-in-out
+    hover:scale-110
+    hover:rotate-3
+    hover:shadow-xl hover:shadow-blue-500/40
+    hover:border-blue-500
+  "
+/>
 
             <span
               className="

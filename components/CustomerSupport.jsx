@@ -80,12 +80,24 @@ const CustomerSupport = () => {
             <div className='h-18 border-b flex justify-between items-center p-4'>
                  <div href="/" className="flex items-center gap-2">
                    <div className="group relative overflow-hidden rounded-xl shadow">
-                               <Image
+                                <Image
                                  src="/logo.png"
-                                 width={50}
-                                 height={50}
-                                 alt="Logo"
-                                 className="rounded-xl"
+                                 width={48}
+                                 height={48}
+                                 alt="Learnaxo Logo"
+                                 priority
+                                 className="
+                                   rounded-xl
+                                   border border-blue-400/30
+                                   bg-white
+                                   p-1
+                                   shadow-lg shadow-blue-500/20
+                                   transition-all duration-300 ease-in-out
+                                   hover:scale-110
+                                   hover:rotate-3
+                                   hover:shadow-xl hover:shadow-blue-500/40
+                                   hover:border-blue-500
+                                 "
                                />
                    
                                <span
