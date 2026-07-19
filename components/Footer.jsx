@@ -48,7 +48,7 @@ const Footer = () => {
 
           <ul className="space-y-3">
             <li><Link href="/">Home</Link></li>
-            <li><Link href="/about">About</Link></li>
+            {/* <li><Link href="/about">About</Link></li> */}
             {/* <li><Link href="/courses">Courses</Link></li> */}
             <li><Link href="/contact">Contact</Link></li>
           </ul>
@@ -83,12 +83,12 @@ const Footer = () => {
 
             <div className="flex items-center gap-3">
               <Mail size={18} className="text-blue-400" />
-              <span>info@example.com</span>
+              <span>arman252412@gmail.com</span>
             </div>
 
             <div className="flex items-start gap-3">
               <MapPin size={18} className="mt-1 text-blue-400" />
-              <span>Your City, Uttar Pradesh, India</span>
+              <span>Ghazipur, Uttar Pradesh, India</span>
             </div>
 
     

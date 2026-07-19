@@ -23,7 +23,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 
           <div>
             <h2 className="text-xl font-bold text-gray-900">
-              Rising<span className="text-blue-600">Stars</span>
+              Learn<span className="text-blue-600">axo</span>
             </h2>
             <p className="text-xs text-gray-500">
               Learn Without Limits
