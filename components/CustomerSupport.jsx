@@ -212,7 +212,7 @@ const CustomerSupport = () => {
 
         </div>
 
-        <div onClick={() => setOpen('448px')} className='w-15 h-15 rounded-full bg-black/50 backdrop-blur-md flex justify-center items-center fixed bottom-3 right-3 hover:cursor-pointer'>
+        <div onClick={() => setOpen('448px')} className='w-15 h-15 z-10 rounded-full bg-black/50 backdrop-blur-md flex justify-center items-center fixed bottom-3 right-3 hover:cursor-pointer'>
             <Bot size={30} />
         </div>
     </>

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, GraduationCap, PhoneCall, Phone, PhoneOff } from "lucide-react";
+import { Menu, X, PhoneCall, Phone, PhoneOff } from "lucide-react";
 import { navLinks } from "@/data/allLinks";
 import { FaPhoneAlt } from "react-icons/fa";
 import Image from "next/image";
