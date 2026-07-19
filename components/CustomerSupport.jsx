@@ -4,6 +4,7 @@ import { Bot, CircleChevronRight, GraduationCap, LoaderCircle, Send } from 'luci
 import React, { useEffect, useRef, useState } from 'react'
 import { allApis } from '@/lib/handelApis'
 import ChatMarkdownSupport from './MarkDownSupport'
+import Image from 'next/image'
 
 const CustomerSupport = () => {
 
@@ -78,18 +79,40 @@ const CustomerSupport = () => {
 
             <div className='h-18 border-b flex justify-between items-center p-4'>
                  <div href="/" className="flex items-center gap-2">
-                    <div className="rounded-xl bg-blue-600 p-2 text-white">
-                            <GraduationCap size={24} />
-                    </div>
-                
-                        <div>
-                            <h2 className="text-xl font-bold text-gray-900">
-                              Rising<span className="text-blue-600">Stars</span>
-                            </h2>
-                        <p className="text-xs text-gray-500">
-                              Learn Without Limits
-                        </p>
-                    </div>
+                   <div className="group relative overflow-hidden rounded-xl shadow">
+                               <Image
+                                 src="/logo.png"
+                                 width={50}
+                                 height={50}
+                                 alt="Logo"
+                                 className="rounded-xl"
+                               />
+                   
+                               <span
+                                 className="
+                                   absolute 
+                                   inset-0
+                                   -translate-x-full
+                                   bg-linear-to-r
+                                   from-transparent
+                                   via-white/50
+                                   to-transparent
+                                   group-hover:translate-x-full
+                                   transition-transform
+                                   duration-800
+                                 "
+                               />
+
+                             </div>
+                             <div>
+                               <h2 className="text-xl font-bold text-gray-900">
+                                 Learn<span className="text-blue-600">axo</span>
+                                 
+                               </h2>
+                               <p className="text-xs text-gray-500">
+                                Always here to help
+                               </p>
+                             </div>
                 </div>
 
                  <button onClick={() => setOpen('0px')} className='w-8 h-8 bg-gray-400 border border-gray-200 cursor-pointer flex justify-center items-center rounded-md'>

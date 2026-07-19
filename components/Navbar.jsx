@@ -41,7 +41,7 @@ import Image from "next/image";
                 duration-800
               "
             />
-</div>
+          </div>
           <div>
             <h2 className="text-xl font-bold text-gray-900">
               Learn<span className="text-blue-600">axo</span>
