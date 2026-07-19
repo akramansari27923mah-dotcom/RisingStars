@@ -67,9 +67,9 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="flex-1 hover:-translate-y-8 transition-all duration-300">
+        <div className="flex-1 hover:-translate-y-8 transition-all duration-300 shadow rounded-2xl">
           <Image
-            src="/heroBanner.jpeg"
+            src="/hero.png"
             alt="Online Education"
             width={700}
             height={700}
