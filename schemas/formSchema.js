@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const formDataSchema = new mongoose.Schema({
   fullname: {
@@ -55,7 +55,12 @@ const formDataSchema = new mongoose.Schema({
     trim: true,
     required: true,
   },
+  isValidated: {
+    type: Boolean,
+    default: false,
+  },
+  verificationCode: String,
 });
 
 export const formDataModel =
-  mongoose?.models.formData || mongoose?.model("formData", formDataSchema);
+  mongoose?.models.formData || mongoose?.model('formData', formDataSchema);

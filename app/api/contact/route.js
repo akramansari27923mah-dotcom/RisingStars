@@ -1,6 +1,7 @@
 import { NextResponse as res } from 'next/server';
 import { formDataModel } from '@/schemas/formSchema';
 import { connectDB } from '@/lib/dataBase';
+import { sendEmail } from '@/lib/sendEmail';
 
 export const POST = async (req) => {
   connectDB();
@@ -53,6 +54,8 @@ export const POST = async (req) => {
       );
     }
 
+    const otp = Math.floor(100000 + Math.random() * 900000);
+
     const userData = await formDataModel.create({
       fullname,
       email,
@@ -65,7 +68,11 @@ export const POST = async (req) => {
       school,
       timezone,
       whatsapp,
+      verificationCode: otp,
     });
+
+   await sendEmail(userData.email, otp);
+
 
     return res.json(
       {

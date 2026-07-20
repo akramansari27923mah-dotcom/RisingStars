@@ -13,7 +13,7 @@ export default function TermsAndConditions() {
         </div>
 
         <p className="text-gray-700 leading-8">
-          Welcome to <strong>RisingStars</strong>. By accessing or using our
+          Welcome to <strong>Learnaxo</strong>. By accessing or using our
           website, you agree to comply with these Terms & Conditions. If you do
           not agree with any part of these terms, please do not use our website.
         </p>
@@ -122,10 +122,10 @@ export default function TermsAndConditions() {
 
           <div className="mt-4 rounded-xl border bg-gray-50 p-6">
             <p>
-              <strong>RisingStars</strong>
+              <strong>Learnaxo</strong>
             </p>
-            <p>Email: support@risingstars.com</p>
-            <p>Website: https://risingstars.vercel.app</p>
+            <p>Email: officiallearnaxo@gmail.com</p>
+            <p>Website: https://www.learnaxo.com</p>
           </div>
         </section>
       </div>

@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { allApis } from '@/lib/handelApis'
 import { BsBack } from 'react-icons/bs'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 const ContactPage = () => {
 
@@ -24,6 +25,7 @@ const ContactPage = () => {
   const [formData, setFormData] = useState(model)
   const [loader, setLoader] = useState(false)
   const {handelForm} = allApis()
+  const route = useRouter()
 
   const handelInput = (e) => {
     const {value, name} = e.target
@@ -36,6 +38,9 @@ const ContactPage = () => {
   const handelSubmit = (e) => {
     e.preventDefault()
      handelForm(formData, setFormData,model, setLoader)  
+     setTimeout(() => {
+       route.push('/verification')
+     }, 1000)
   }
 
   return (

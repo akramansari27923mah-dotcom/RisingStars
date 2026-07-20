@@ -12,7 +12,7 @@
         </div>
 
         <p className="text-gray-700 leading-8">
-          At <strong>RisingStars</strong>, we value your privacy. This Privacy
+          At <strong>Learnaxo</strong>, we value your privacy. This Privacy
           Policy explains how we collect, use, and protect the information you
           provide when using our website.
         </p>
@@ -112,12 +112,12 @@
             us.
           </p>
 
-          <div className="rounded-xl border bg-gray-50 p-6 mt-4 text-black">
+          <div className="mt-4 rounded-xl border bg-gray-50 p-6">
             <p>
-              <strong>RisingStars</strong>
+              <strong>Learnaxo</strong>
             </p>
-            <p>Email: support@risingstars.com</p>
-            <p>Website: https://risingstars.vercel.app</p>
+            <p>Email: officiallearnaxo@gmail.com</p>
+            <p>Website: https://www.learnaxo.com</p>
           </div>
         </section>
       </div>
