@@ -25,6 +25,36 @@ const formDataSchema = new mongoose.Schema({
     trim: true,
     required: true,
   },
+  age: {
+    type: Number,
+    trim: true,
+    required: true,
+  },
+  country: {
+    type: String,
+    trim: true,
+    required: true,
+  },
+  grade: {
+    type: String,
+    trim: true,
+    required: true,
+  },
+  school: {
+    type: String,
+    trim: true,
+    required: true,
+  },
+  timezone: {
+    type: String,
+    trim: true,
+    required: true,
+  },
+  whatsapp: {
+    type: Number,
+    trim: true,
+    required: true,
+  },
 });
 
 export const formDataModel =

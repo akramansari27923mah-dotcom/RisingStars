@@ -9,11 +9,16 @@ const ContactPage = () => {
 
   const model = {
     fullname: "",
+    age: "",
+    country: "",
+    school: "",
+    grade: "",
+    timezone: "",
     email: "",
     phone: "",
     subject: "",
-    message: ""
-
+    message: "",
+    whatsapp : ""
   }
 
   const [formData, setFormData] = useState(model)
@@ -34,81 +39,211 @@ const ContactPage = () => {
   }
 
   return (
-   <div className='flex justify-center items-center h-screen bg-gray-100'>
+   <div className='flex justify-center items-center min-h-screen bg-gray-100'>
 
-    <Link href={'/'} className='absolute top-5 left-5 flex justify-center items-center gap-2 cursor-pointer hover:scale-105 transition-all duration-300 border border-gray-200 bg-white text-black px-4 py-2 rounded-2xl shadow  hover:bg-white/80'>
+    <Link href={'/'} className='fixed top-5 left-5 flex justify-center items-center gap-2 cursor-pointer hover:scale-105 transition-all duration-300 border border-gray-200 bg-white text-black px-4 py-2 rounded-2xl shadow  hover:bg-white/80'>
       <CircleChevronLeft size={18} />
         <span>
         Back
         </span>
       </Link>
 
-    <div className='shadow p-5 rounded-2xl text-black bg-white w-full max-w-2xl flex flex-col justify-center items-center gap-5'>
-      
-      <div className='flex  justify-center items-center gap-3'>
-        <div className='w-15 h-15 bg-gray-100 rounded-full text-blue-500 flex justify-center items-center'>
-          
-          <Mail size={30} />
-        </div>
-          <div>
-            <h1 className='text-2xl font-bold'>Contact Us</h1>
-            <p className='text-xs text-gray-600'>we`d like to here you! send us a message</p>
-          </div>
-      </div>
-      
-      <form className='grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-5 w-full text-sm' onSubmit={handelSubmit}>
+   <div className="max-w-7xl mx-auto px-4 sm:px-6 text-black lg:px-8 py-10 shadow-md m-10 rounded-2xl">
 
-        <div className='flex flex-col justify-center gap-1'>
-          <label className='text-sm font-semibold'>Full Name</label>
-          <input onChange={handelInput} value={formData.fullname} name='fullname' type="text" className='px-4 py-2 focus:border-gray-500  outline-none rounded-sm w-full border border-gray-300 ' placeholder='Enter your full name ' />
-        </div>
+  <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-center sm:text-left mb-8">
+    <div className="w-16 h-16 bg-gray-100 rounded-full flex justify-center items-center text-blue-500">
+      <Mail size={30} />
+    </div>
 
-        <div className='flex flex-col justify-center gap-1'>
-          <label className='text-sm font-semibold'>Email Address</label>
-          <input onChange={handelInput} value={formData.email} name='email' type="text" className='px-4 py-2 focus:border-gray-500  placeholder:text-sm outline-none rounded-sm w-full border border-gray-300 ' placeholder='Enter your full name ' />
-        </div>
+    <div>
+      <h1 className="text-2xl md:text-3xl font-bold">
+        Contact Us
+      </h1>
 
-        <div className='flex flex-col justify-center gap-1'>
-          <label className='text-sm font-semibold'>Phone Number(Optional)</label>
-          <input onChange={handelInput} value={formData.phone} name='phone' type="number" className='px-4 py-2 focus:border-gray-500 placeholder:text-sm  outline-none rounded-sm w-full border border-gray-300 ' placeholder='Enter your Number ' />
-        </div>
+      <p className="text-sm text-gray-600 mt-1">
+        We&apos;d love to hear from you! Send us a message.
+      </p>
+    </div>
+  </div>
 
-        <div className='flex flex-col justify-center gap-1'>
-          <label className='text-sm font-semibold'>Subject</label>
-          <input onChange={handelInput} name='subject'  value={formData.subject} type="text" className='px-4 py-2 focus:border-gray-500 placeholder:text-sm  outline-none rounded-sm w-full border border-gray-300 ' placeholder='Enter your subject' />
-        </div>
+  <form
+    onSubmit={handelSubmit}
+    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
+  >
 
-        <div className='flex flex-col justify-center md:col-span-2 gap-1'>
-          <label className='text-sm font-semibold'>Message</label>
-          <textarea onChange={handelInput} name='message' value={formData.message} rows={4} className='px-4 py-2 focus:border-gray-500 placeholder:text-sm  outline-none rounded-sm w-full border border-gray-300 ' placeholder='Write your message here... ' />
-        </div>
+    
+    <div className="flex flex-col gap-1">
+      <label className="font-semibold">Full Name</label>
 
-        <button className='flex justify-center items-center cursor-pointer gap-3 bg-blue-500 md:col-span-2 py-2 rounded-sm text-white hover:scale-105 active:scale-100 transition-all duration-300'>
-          {
-            !loader ? (
-              <>
+      <input
+        type="text"
+        name="fullname"
+        value={formData.fullname}
+        onChange={handelInput}
+        placeholder="Enter your full name"
+        className="w-full rounded-md border placeholder:text-sm border-gray-300 px-4 py-2 outline-none focus:border-blue-500"
+      />
+    </div>
+
+  
+    <div className="flex flex-col gap-1">
+      <label className="font-semibold">Age</label>
+
+      <input
+        type="number"
+        name="age"
+        value={formData.age}
+        onChange={handelInput}
+        placeholder="Enter your age"
+        className="w-full rounded-md border placeholder:text-sm border-gray-300 px-4 py-2 outline-none focus:border-blue-500"
+      />
+    </div>
+
+    <div className="flex flex-col gap-1">
+      <label className="font-semibold">Country</label>
+
+      <input
+        type="text"
+        name="country"
+        value={formData.country}
+        onChange={handelInput}
+        placeholder="Enter your country"
+        className="w-full rounded-md border placeholder:text-sm border-gray-300 px-4 py-2 outline-none focus:border-blue-500"
+      />
+    </div>
+
+  
+    <div className="flex flex-col gap-1">
+      <label className="font-semibold">Time Zone</label>
+
+      <input
+        type="text"
+        name="timezone"
+        value={formData.timezone}
+        onChange={handelInput}
+        placeholder="Enter your time zone"
+        className="w-full rounded-md border placeholder:text-sm border-gray-300 px-4 py-2 outline-none focus:border-blue-500"
+      />
+    </div>
+
+    
+    <div className="flex flex-col gap-1">
+      <label className="font-semibold">School</label>
+
+      <input
+        type="text"
+        name="school"
+        value={formData.school}
+        onChange={handelInput}
+        placeholder="Enter your school"
+        className="w-full rounded-md border placeholder:text-sm border-gray-300 px-4 py-2 outline-none focus:border-blue-500"
+      />
+    </div>
+
+  
+    <div className="flex flex-col gap-1">
+      <label className="font-semibold">Grade</label>
+
+      <input
+        type="text"
+        name="grade"
+        value={formData.grade}
+        onChange={handelInput}
+        placeholder="Enter your grade"
+        className="w-full rounded-md border placeholder:text-sm border-gray-300 px-4 py-2 outline-none focus:border-blue-500"
+      />
+    </div>
+
+    
+    <div className="flex flex-col gap-1">
+      <label className="font-semibold">WhatsApp Number</label>
+
+      <input
+        type="number"
+        name="whatsapp"
+        value={formData.whatsapp}
+        onChange={handelInput}
+        placeholder="Enter your WhatsApp number"
+        className="w-full rounded-md border placeholder:text-sm border-gray-300 px-4 py-2 outline-none focus:border-blue-500"
+      />
+    </div>
+
+  
+    <div className="flex flex-col gap-1">
+      <label className="font-semibold">Email Address</label>
+
+      <input
+        type="email"
+        name="email"
+        value={formData.email}
+        onChange={handelInput}
+        placeholder="Enter your email"
+        className="w-full rounded-md border placeholder:text-sm border-gray-300 px-4 py-2 outline-none focus:border-blue-500"
+      />
+    </div>
+
+    
+    <div className="flex flex-col gap-1">
+      <label className="font-semibold">
+        Phone Number (Optional)
+      </label>
+
+      <input
+        type="number"
+        name="phone"
+        value={formData.phone}
+        onChange={handelInput}
+        placeholder="Enter your phone number"
+        className="w-full rounded-md border placeholder:text-sm border-gray-300 px-4 py-2 outline-none focus:border-blue-500"
+      />
+    </div>
+
+    
+    <div className="flex flex-col gap-1 lg:col-span-3">
+      <label className="font-semibold">Subject</label>
+
+      <input
+        type="text"
+        name="subject"
+        value={formData.subject}
+        onChange={handelInput}
+        placeholder="Enter your subject"
+        className="w-full rounded-md border placeholder:text-sm border-gray-300 px-4 py-2 outline-none focus:border-blue-500"
+      />
+    </div>
+
+    {/* Message */}
+    <div className="flex flex-col gap-1 lg:col-span-3">
+      <label className="font-semibold">Message</label>
+
+      <textarea
+        rows={5}
+        name="message"
+        value={formData.message}
+        onChange={handelInput}
+        placeholder="Write your message here..."
+        className="w-full rounded-md border placeholder:text-sm border-gray-300 px-4 py-2 outline-none resize-none focus:border-blue-500"
+      />
+    </div>
+
+    <button
+      className="lg:col-span-3 w-full py-3 rounded-md bg-blue-600 text-white flex justify-center items-center gap-2 hover:bg-blue-700 transition"
+    >
+      {!loader ? (
+        <>
           <Send size={18} />
-          <span>
-            Send
-          </span>
-              </>
-            ) : 
-            (
-              <>
-          <LoaderCircle className='animate-spin' size={18} />
-          <span className='tracking-wider'>
-            Sending...
-          </span>
-              </>
-            )
-          }
-        </button>
-      </form>
+          <span>Send Message</span>
+        </>
+      ) : (
+        <>
+          <LoaderCircle className="animate-spin" size={18} />
+          <span>Sending...</span>
+        </>
+      )}
+    </button>
 
-      {/* <div>
-        support
-      </div> */}
-    </div> 
+  </form>
+</div>
    </div>
   )
 }
