@@ -133,7 +133,7 @@ const CustomerSupport = () => {
 
             </div>
 
-            <div className='w-full md:h-125 h-152 overflow-scroll hide-scroll border-b p-2'>
+            <div className='w-full flex-1 md:h-125 h-152 overflow-scroll hide-scroll border-b p-2'>
                 <div className="flex flex-col gap-4 p-5 overflow-y-auto">
                     {message.map((msg, ind) => (
                         <div
@@ -212,7 +212,7 @@ const CustomerSupport = () => {
 
         </div>
 
-        <div onClick={() => setOpen('448px')} className='w-15 h-15 z-10 rounded-full bg-black/50 backdrop-blur-md flex justify-center items-center fixed bottom-3 right-3 hover:cursor-pointer'>
+        <div onClick={() => setOpen('448px')} className='w-15 h-15 z-10 bg-linear-to-r from-blue-400 to-indigo-400 bg-transparent  rounded-full backdrop-blur-md flex justify-center items-center fixed bottom-3 right-3 hover:cursor-pointer hover:-translate-y-2 transition-all duration-300'>
             <Bot size={30} />
         </div>
     </>
