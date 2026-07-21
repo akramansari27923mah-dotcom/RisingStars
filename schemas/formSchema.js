@@ -46,7 +46,7 @@ const formDataSchema = new mongoose.Schema({
     required: true,
   },
   timezone: {
-    type: String,
+    type: Object,
     trim: true,
     required: true,
   },

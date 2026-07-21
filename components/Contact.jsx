@@ -1,10 +1,21 @@
 "use client"
+import dynamic from 'next/dynamic'
 import { CircleChevronLeft, LoaderCircle, Mail, Send } from 'lucide-react'
 import React, { useState } from 'react'
 import { allApis } from '@/lib/handelApis'
-import { BsBack } from 'react-icons/bs'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import { CountrySelect } from 'react-country-state-city'
+import "react-country-state-city/dist/react-country-state-city.css";
+import "react-phone-number-input/style.css";
+import PhoneInput from 'react-phone-number-input'
+const TimezoneSelect = dynamic(
+  () => import("react-timezone-select"),
+  {
+    ssr: false,
+  }
+);
+
 
 const ContactPage = () => {
 
@@ -41,6 +52,8 @@ const ContactPage = () => {
      setTimeout(() => {
        route.push('/verification')
      }, 1000)
+    console.log(formData);
+    
   }
 
   return (
@@ -86,7 +99,7 @@ const ContactPage = () => {
         value={formData.fullname}
         onChange={handelInput}
         placeholder="Enter your full name"
-        className="w-full rounded-md border placeholder:text-sm border-gray-300 px-4 py-2 outline-none focus:border-blue-500"
+        className="w-full rounded-md border placeholder:text-sm border-gray-400 px-4 py-2 outline-none focus:border-blue-500"
       />
     </div>
 
@@ -100,34 +113,51 @@ const ContactPage = () => {
         value={formData.age}
         onChange={handelInput}
         placeholder="Enter your age"
-        className="w-full rounded-md border placeholder:text-sm border-gray-300 px-4 py-2 outline-none focus:border-blue-500"
+        className="w-full rounded-md border placeholder:text-sm border-gray-400 px-4 py-2 outline-none focus:border-blue-500"
       />
     </div>
 
-    <div className="flex flex-col gap-1">
-      <label className="font-semibold">Country</label>
+    <div>
+      <label className="block mb-2 font-medium">
+        {
+          formData.country ? (
+            <div>
+              <p className='text-sm'>Selected Country :
+                {" "} 
+                <span className='text-md font-semibold'>
+                {formData.country}
+                </span>
+                </p>
+            </div>
+          )
+          :
+        'Select Country'
+        }
+      </label>
 
-      <input
-        type="text"
-        name="country"
+      <CountrySelect
+        placeHolder="Choose Country"
+        onChange={(country) => setFormData((prev) => ({
+          ...prev,
+          country: country.name
+        }))}
+        name='country'
         value={formData.country}
-        onChange={handelInput}
-        placeholder="Enter your country"
-        className="w-full rounded-md border placeholder:text-sm border-gray-300 px-4 py-2 outline-none focus:border-blue-500"
       />
     </div>
 
   
     <div className="flex flex-col gap-1">
-      <label className="font-semibold">Time Zone</label>
+       <label className="font-semibold">Time Zone</label>
 
-      <input
-        type="text"
-        name="timezone"
-        value={formData.timezone}
-        onChange={handelInput}
-        placeholder="Enter your time zone"
-        className="w-full rounded-md border placeholder:text-sm border-gray-300 px-4 py-2 outline-none focus:border-blue-500"
+    
+      <TimezoneSelect
+      value={formData.timezone}
+      name='timezone'
+      onChange={(time) => setFormData((prev) => ({
+        ...prev,
+        timezone: time || ""
+      }))}
       />
     </div>
 
@@ -141,7 +171,7 @@ const ContactPage = () => {
         value={formData.school}
         onChange={handelInput}
         placeholder="Enter your school"
-        className="w-full rounded-md border placeholder:text-sm border-gray-300 px-4 py-2 outline-none focus:border-blue-500"
+        className="w-full rounded-md border placeholder:text-sm border-gray-400 px-4 py-2 outline-none focus:border-blue-500"
       />
     </div>
 
@@ -155,22 +185,28 @@ const ContactPage = () => {
         value={formData.grade}
         onChange={handelInput}
         placeholder="Enter your grade"
-        className="w-full rounded-md border placeholder:text-sm border-gray-300 px-4 py-2 outline-none focus:border-blue-500"
+        className="w-full rounded-md border placeholder:text-sm border-gray-400 px-4 py-2 outline-none focus:border-blue-500"
       />
     </div>
 
     
     <div className="flex flex-col gap-1">
-      <label className="font-semibold">WhatsApp Number</label>
 
-      <input
-        type="number"
-        name="whatsapp"
-        value={formData.whatsapp}
-        onChange={handelInput}
-        placeholder="Enter your WhatsApp number"
-        className="w-full rounded-md border placeholder:text-sm border-gray-300 px-4 py-2 outline-none focus:border-blue-500"
+  <label>Enter Whatsapp Number</label>
+
+<div className='border border-gray-400 rounded-lg px-3 py-2 focus-within:ring-2 focus-within:ring-blue-500'>
+     <PhoneInput
+      international
+      defaultCountry="IN"
+      name="whatsapp"
+      value={formData.whatsapp}
+      onChange={(phone) => setFormData((prev) => ({
+      ...prev,
+      whatsapp: phone|| ""
+      }))}
+      placeholder="Enter phone number"
       />
+      </div>
     </div>
 
   
@@ -183,24 +219,28 @@ const ContactPage = () => {
         value={formData.email}
         onChange={handelInput}
         placeholder="Enter your email"
-        className="w-full rounded-md border placeholder:text-sm border-gray-300 px-4 py-2 outline-none focus:border-blue-500"
+        className="w-full rounded-md border placeholder:text-sm border-gray-400 px-4 py-2 outline-none focus:border-blue-500"
       />
     </div>
 
     
     <div className="flex flex-col gap-1">
-      <label className="font-semibold">
-        Phone Number (Optional)
-      </label>
+      <label>Phone Number (Optional)</label>
 
-      <input
-        type="number"
-        name="phone"
-        value={formData.phone}
-        onChange={handelInput}
-        placeholder="Enter your phone number"
-        className="w-full rounded-md border placeholder:text-sm border-gray-300 px-4 py-2 outline-none focus:border-blue-500"
+      <div className='border border-gray-400 rounded-lg px-3 py-2 focus-within:ring-2 focus-within:ring-blue-500'>
+
+     <PhoneInput
+      international
+      defaultCountry="IN"
+      name="phone"
+      value={formData.phone}
+      onChange={(phones) => setFormData((prev) => ({
+      ...prev,
+      phone: phones|| ""
+      }))}
+      placeholder="Enter phone number"
       />
+      </div>
     </div>
 
     
@@ -213,7 +253,7 @@ const ContactPage = () => {
         value={formData.subject}
         onChange={handelInput}
         placeholder="Enter your subject"
-        className="w-full rounded-md border placeholder:text-sm border-gray-300 px-4 py-2 outline-none focus:border-blue-500"
+        className="w-full rounded-md border placeholder:text-sm border-gray-400 px-4 py-2 outline-none focus:border-blue-500"
       />
     </div>
 
@@ -227,12 +267,12 @@ const ContactPage = () => {
         value={formData.message}
         onChange={handelInput}
         placeholder="Write your message here..."
-        className="w-full rounded-md border placeholder:text-sm border-gray-300 px-4 py-2 outline-none resize-none focus:border-blue-500"
+        className="w-full rounded-md border placeholder:text-sm border-gray-400 px-4 py-2 outline-none resize-none focus:border-blue-500"
       />
     </div>
 
     <button
-      className="lg:col-span-3 w-full py-3 rounded-md bg-blue-600 text-white flex justify-center items-center gap-2 hover:bg-blue-700 transition"
+      className="lg:col-span-3 w-full py-3 rounded-md bg-blue-600 text-white flex justify-center items-center gap-2 hover:bg-blue-700 transition cursor-pointer"
     >
       {!loader ? (
         <>
