@@ -1,37 +1,6 @@
-import {
-  Lightbulb,
-  PencilLine,
-  ClipboardCheck,
-  Trophy,
-} from "lucide-react";
 import Image from "next/image";
+import { framework } from "@/data/allLinks";
 
-const framework = [
-  {
-    title: "Learn Concepts",
-    description:
-      "Understand every topic with easy explanations and interactive classes.",
-    icon: '/framework/concept.jpeg',
-  },
-  {
-    title: "Practice Daily",
-    description:
-      "Strengthen your knowledge through worksheets, homework, and exercises.",
-    icon: '/framework/practice.jpeg',
-  },
-  {
-    title: "Regular Tests",
-    description:
-      "Track your progress with weekly quizzes and mock examinations.",
-    icon: '/framework/test.jpeg',
-  },
-  {
-    title: "Achieve Success",
-    description:
-      "Build confidence, improve performance, and excel in your exams.",
-    icon: '/framework/success.jpeg',
-  },
-];
 
 const StudyFramework = () => {
   return (

@@ -66,7 +66,7 @@ const ContactPage = () => {
         </span>
       </Link>
 
-   <div className="max-w-7xl mx-auto px-4 sm:px-6 text-black lg:px-8 py-10 shadow-md m-10 rounded-2xl">
+   <div className="max-w-7xl mx-auto px-4 sm:px-6 bg-white text-black lg:px-8 py-10 shadow-md m-10 rounded-2xl">
 
   <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-center sm:text-left mb-8">
     <div className="w-16 h-16 bg-gray-100 rounded-full flex justify-center items-center text-blue-500">
