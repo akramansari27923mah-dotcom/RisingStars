@@ -1,4 +1,5 @@
 import { boards } from "@/data/allLinks";
+import Image from "next/image";
 
 const EducationBoards = () => {
   return (
@@ -29,21 +30,28 @@ const EducationBoards = () => {
             return (
               <div
                 key={board.title}
-                className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+                className="rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
               >
                 <div
-                  className={`flex h-16 w-16 items-center justify-center rounded-2xl ${board.color}`}
+                  className={`flex items-center justify-center rounded-t-2xl overflow-hidden`}
                 >
-                  <Icon size={30} />
+                 <Image 
+                 src={board?.icon}
+                 alt={board.title}
+                 width={600}
+                 height={600}
+                 />
                 </div>
 
-                <h3 className="mt-6 text-2xl font-semibold text-gray-900">
+              <div className="p-5">
+                <h3 className=" text-2xl font-semibold text-gray-900">
                   {board.title}
                 </h3>
 
                 <p className="mt-3 text-gray-600">
                   {board.description}
                 </p>
+              </div>
               </div>
             );
           })}

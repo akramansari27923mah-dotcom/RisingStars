@@ -4,31 +4,32 @@ import {
   ClipboardCheck,
   Trophy,
 } from "lucide-react";
+import Image from "next/image";
 
 const framework = [
   {
     title: "Learn Concepts",
     description:
       "Understand every topic with easy explanations and interactive classes.",
-    icon: Lightbulb,
+    icon: '/framework/concept.jpeg',
   },
   {
     title: "Practice Daily",
     description:
       "Strengthen your knowledge through worksheets, homework, and exercises.",
-    icon: PencilLine,
+    icon: '/framework/practice.jpeg',
   },
   {
     title: "Regular Tests",
     description:
       "Track your progress with weekly quizzes and mock examinations.",
-    icon: ClipboardCheck,
+    icon: '/framework/test.jpeg',
   },
   {
     title: "Achieve Success",
     description:
       "Build confidence, improve performance, and excel in your exams.",
-    icon: Trophy,
+    icon: '/framework/success.jpeg',
   },
 ];
 
@@ -61,11 +62,18 @@ const StudyFramework = () => {
             return (
               <div
                 key={item.title}
-                className="relative rounded-2xl border bg-white p-8 shadow-sm transition hover:-translate-y-2 hover:shadow-lg"
+                className="relative rounded-2xl border bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-lg"
               >
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-100 text-blue-600">
-                  <Icon size={30} />
+                <div className=" flex items-center justify-center overflow-hidden  rounded-t-2xl bg-blue-100 text-blue-600">
+                  <Image 
+                  src={item.icon}
+                  alt={item.title}
+                  width={600}
+                  height={600}
+                  />
                 </div>
+
+              <div className="p-5">
 
                 <h3 className="text-xl font-semibold text-gray-900">
                   {item.title}
@@ -81,6 +89,7 @@ const StudyFramework = () => {
                     →
                   </span>
                 )}
+              </div>
               </div>
             );
           })}

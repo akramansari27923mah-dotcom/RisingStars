@@ -1,5 +1,6 @@
 
 import { subjects } from "@/data/allLinks";
+import Image from "next/image";
 
 const Subjects = () => {
   return (
@@ -29,13 +30,20 @@ const Subjects = () => {
             return (
               <div
                 key={subject.title}
-                className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+                className="group rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
               >
                 <div
-                  className={`mb-5 flex h-14 w-14 items-center justify-center rounded-xl ${subject.color}`}
+                  className={` flex  items-center justify-center rounded-t-xl overflow-hidden`}
                 >
-                  <Icon size={28} />
+                  <Image 
+                  src={subject?.icon}
+                  width={600}
+                  height={600}
+                  alt={subject.title}
+                  />
                 </div>
+
+                <div className="p-5">
 
                 <h3 className="text-xl font-semibold text-gray-900">
                   {subject.title}
@@ -44,6 +52,7 @@ const Subjects = () => {
                 <p className="mt-3 text-gray-600">
                   {subject.description}
                 </p>
+                </div>
                 
               </div>
             );

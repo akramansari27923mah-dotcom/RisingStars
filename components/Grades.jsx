@@ -1,4 +1,5 @@
 import { grades } from "@/data/allLinks";
+import Image from "next/image";
 
 
 const Grades = () => {
@@ -29,15 +30,22 @@ const Grades = () => {
             return (
               <div
                 key={grade.title}
-                className="rounded-2xl bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+                className="rounded-2xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
               >
                 <div
-                  className={`flex h-16 w-16 items-center justify-center rounded-2xl ${grade.color}`}
+                  className={`flex items-center justify-center rounded-t-2xl overflow-hidden`}
                 >
-                  <Icon size={30} />
+                  <Image 
+                    src={grade.icon}
+                    alt={grade.title}
+                    width={600}
+                    height={600}
+                  />
                 </div>
 
-                <h3 className="mt-6 text-2xl font-semibold text-gray-900">
+                <div className="p-5">
+
+                <h3 className=" text-2xl font-semibold text-gray-900">
                   {grade.title}
                 </h3>
 
@@ -48,6 +56,7 @@ const Grades = () => {
                 <p className="mt-4 text-gray-600">
                   {grade.description}
                 </p>
+                </div>
               </div>
             );
           })}
