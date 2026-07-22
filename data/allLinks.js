@@ -57,6 +57,7 @@ export const boards = [
     icon: '/board/ib.jpeg',
     color: 'bg-pink-100 text-pink-600',
   },
+  
   {
     title: 'CBSE',
     description:
