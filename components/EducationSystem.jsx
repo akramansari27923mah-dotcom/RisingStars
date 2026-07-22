@@ -23,9 +23,8 @@ const EducationBoards = () => {
         </div>
 
         {/* Cards */}
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-3 grid-cols-1">
           {boards.map((board) => {
-            const Icon = board.icon;
 
             return (
               <div
