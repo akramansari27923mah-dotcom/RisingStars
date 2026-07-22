@@ -40,6 +40,7 @@ const EducationBoards = () => {
                  alt={board.title}
                  width={600}
                  height={600}
+                 loading="lazy"
                  />
                 </div>
 

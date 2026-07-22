@@ -40,6 +40,7 @@ const Grades = () => {
                     alt={grade.title}
                     width={600}
                     height={600}
+                    loading="lazy"
                   />
                 </div>
 

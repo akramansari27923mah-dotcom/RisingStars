@@ -39,6 +39,7 @@ const WhyChooseUs = () => {
                                width={600}
                                height={600}
                                alt={feature.title}
+                               loading="lazy"
                                />
                              </div>
              

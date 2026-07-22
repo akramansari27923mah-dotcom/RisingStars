@@ -70,6 +70,7 @@ const StudyFramework = () => {
                   alt={item.title}
                   width={600}
                   height={600}
+                  loading="lazy"
                   />
                 </div>
 
