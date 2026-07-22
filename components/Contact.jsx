@@ -9,6 +9,8 @@ import { CountrySelect } from 'react-country-state-city'
 import "react-country-state-city/dist/react-country-state-city.css";
 import "react-phone-number-input/style.css";
 import PhoneInput from 'react-phone-number-input'
+import { validation } from '@/lib/validation'
+import { showError } from '@/lib/toaster'
 const TimezoneSelect = dynamic(
   () => import("react-timezone-select"),
   {
@@ -48,12 +50,15 @@ const ContactPage = () => {
 
   const handelSubmit = (e) => {
     e.preventDefault()
+   const err = validation(formData)
+      if(err){
+        return showError(err)
+      }
+   
      handelForm(formData, setFormData,model, setLoader)  
      setTimeout(() => {
        route.push('/verification')
      }, 1000)
-    console.log(formData);
-    
   }
 
   return (
